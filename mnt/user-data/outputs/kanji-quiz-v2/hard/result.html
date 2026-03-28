@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ハードモード 結果発表 — 漢字検定ゲーム</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;600;800&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <style>
+    :root {
+      --accent:      #e87070;
+      --accent-hover:#f08080;
+      --accent-dim:  rgba(232,112,112,.10);
+      --accent-glow: rgba(232,112,112,.22);
+    }
+    .score-main   { text-shadow: 0 0 40px rgba(232,112,112,.35); }
+    .score-bar-fill--yomi  { background: linear-gradient(90deg, #c06060, #e87070); }
+    .score-bar-fill--kanji { background: linear-gradient(90deg, #a04040, #e87070); }
+    .result-hero__mode-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      background: rgba(232,112,112,.12);
+      color: #e87070;
+      border: 1px solid rgba(232,112,112,.3);
+      margin-bottom: 12px;
+    }
+    .share-btn--x:hover   { border-color: #666; }
+    .btn--retry:hover { border-color: #e87070; color: #e87070; background: rgba(232,112,112,.08); }
+  </style>
+</head>
+<body>
+
+<div class="result-page" id="js-result-page">
+
+  <!-- ① スコアヒーロー -->
+  <section class="result-hero">
+    <div class="result-hero__mode-tag">
+      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+           viewBox="0 0 24 24" fill="none" stroke="currentColor"
+           stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+           aria-hidden="true">
+        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+      </svg>
+      HARD MODE
+    </div>
+    <p class="result-hero__eyebrow">結果発表</p>
+    <div class="result-score-display">
+      <span class="score-main" id="js-score-main">0</span>
+      <span class="score-denom">/ 15</span>
+    </div>
+    <p class="score-pct" id="js-score-pct">正答率 0%</p>
+  </section>
+
+  <!-- ② レベル称号 -->
+  <section class="result-rank" id="js-rank-section">
+    <div class="rank-img-wrap">
+      <img src="" alt="" id="js-rank-img"
+           onerror="this.style.display='none'; document.getElementById('js-rank-fallback').style.display='flex';">
+      <div class="rank-img-wrap__fallback" id="js-rank-fallback" style="display:none;color:#e87070">⚔</div>
+    </div>
+    <div>
+      <span class="badge badge--rank" style="margin-bottom:10px" id="js-rank-badge">称号</span>
+      <h2 class="rank-title" id="js-rank-title">―</h2>
+      <p class="rank-caption" id="js-rank-caption"></p>
+    </div>
+  </section>
+
+  <!-- ③ スコア内訳 -->
+  <section class="result-section">
+    <h3 class="section-title">スコア内訳</h3>
+    <div class="score-bars">
+      <div class="score-bar-row">
+        <div class="score-bar-meta">
+          <span class="score-bar-label">
+            <span class="badge badge--yomi" style="font-size:.72rem;padding:2px 8px">読み</span>
+          </span>
+          <span class="score-bar-val" id="js-yomi-val">0 / 10</span>
+        </div>
+        <div class="score-bar-track">
+          <div class="score-bar-fill score-bar-fill--yomi" id="js-yomi-bar" style="width:0%"></div>
+        </div>
+      </div>
+      <div class="score-bar-row">
+        <div class="score-bar-meta">
+          <span class="score-bar-label">
+            <span class="badge badge--kanji" style="font-size:.72rem;padding:2px 8px">漢字</span>
+          </span>
+          <span class="score-bar-val" id="js-kanji-val">0 / 5</span>
+        </div>
+        <div class="score-bar-track">
+          <div class="score-bar-fill score-bar-fill--kanji" id="js-kanji-bar" style="width:0%"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ④ 答え合わせ -->
+  <section class="result-section">
+    <h3 class="section-title">答え合わせ</h3>
+    <div class="review-list" id="js-review-list"></div>
+  </section>
+
+  <!-- ⑤ シェア -->
+  <section class="share-section">
+    <h3 class="share-title">結果をシェアする</h3>
+    <div class="share-btns">
+      <button class="share-btn share-btn--x" id="js-share-x" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+             viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+        </svg>
+        X (Twitter) でシェア
+      </button>
+      <button class="share-btn share-btn--bsky" id="js-share-bsky" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+             viewBox="0 0 360 320" fill="currentColor" aria-hidden="true">
+          <path d="M180 142c-16.3-31.7-60.7-90.8-102-120C38 2 17.5 0 9.7 0 4.4 0 0 4 0 9v163c0 13.1 8.9 25 22.2 28.5L160 240v-98zM180 142c16.3-31.7 60.7-90.8 102-120 40-20 60.5-22 68.3-22 5.3 0 9.7 4 9.7 9v163c0 13.1-8.9 25-22.2 28.5L200 240v-98z"/>
+          <path d="M160 240c0 44.4-1.5 89.3-36 112-20.2 13.4-48 8-48-32 0-33.3 22.7-64.5 56-64.5H160zM200 240c0 44.4 1.5 89.3 36 112 20.2 13.4 48 8 48-32 0-33.3-22.7-64.5-56-64.5H200z"/>
+        </svg>
+        Bluesky でシェア
+      </button>
+    </div>
+    <div class="result-retry">
+      <a href="/hard/quiz.html" class="btn--retry">もう一度挑戦する</a>
+    </div>
+    <div class="result-retry" style="margin-top:10px">
+      <a href="/index.html" class="btn--retry" style="font-size:.85rem;padding:10px 24px">
+        通常モードに戻る
+      </a>
+    </div>
+  </section>
+
+</div>
+
+<script src="/assets/js/hard-questions.js"></script>
+<script src="/assets/js/hard-result.js"></script>
+<script src="/assets/js/footer.js"></script>
+</body>
+</html>

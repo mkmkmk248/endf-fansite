@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ハードモード クイズ — 漢字検定ゲーム</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;600;800&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    /* Hard mode: red accent */
+    :root {
+      --accent:      #e87070;
+      --accent-hover:#f08080;
+      --accent-dim:  rgba(232,112,112,.10);
+      --accent-glow: rgba(232,112,112,.20);
+    }
+    .choice-btn.is-selected {
+      background: rgba(232,112,112,.10);
+      border-color: #e87070;
+      box-shadow: 0 0 16px rgba(232,112,112,.20);
+    }
+    .choice-btn.is-selected .choice-label {
+      background: #e87070;
+      border-color: #e87070;
+      color: #fff;
+    }
+    .quiz-header__mode-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      padding: 2px 8px;
+      background: rgba(232,112,112,.12);
+      color: #e87070;
+      border: 1px solid rgba(232,112,112,.3);
+      border-radius: 999px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="quiz-page">
+
+  <header class="quiz-header">
+    <div class="quiz-header__top">
+      <div style="display:flex;align-items:center;gap:8px">
+        <span class="quiz-header__title">漢字検定ゲーム</span>
+        <span class="quiz-header__mode-tag">HARD</span>
+      </div>
+      <span class="progress-label" id="js-progress-label" aria-live="polite">Q1 / 15</span>
+    </div>
+    <div class="progress-wrap">
+      <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="15" aria-valuenow="0" id="js-progress-bar">
+        <div class="progress-fill" id="js-progress-fill" style="width:0%"></div>
+      </div>
+    </div>
+  </header>
+
+  <div class="phase-wrap" aria-hidden="true">
+    <div class="phase-img-box" id="js-phase-box">
+      <img src="../assets/images/hard-phase1.png" alt="" id="js-phase-img"
+           onerror="this.style.display='none'; document.getElementById('js-phase-fallback').style.display='flex';">
+      <div class="phase-img-box__fallback" id="js-phase-fallback"
+           style="display:none;color:#e87070">炎</div>
+    </div>
+  </div>
+
+  <main class="quiz-main">
+    <div class="quiz-card" id="js-quiz-card">
+
+      <div class="quiz-type-row">
+        <span class="badge badge--yomi" id="js-type-badge">読み</span>
+        <span class="quiz-qnum" id="js-qnum">第1問</span>
+      </div>
+
+      <p class="quiz-question" id="js-question-text"></p>
+
+      <div>
+        <span class="quiz-word" id="js-word"></span>
+      </div>
+
+      <div class="choices" role="group" aria-label="選択肢" id="js-choices">
+        <button class="choice-btn" id="choice-0" aria-label="">
+          <span class="choice-label">A</span>
+          <span class="choice-text"></span>
+        </button>
+        <button class="choice-btn" id="choice-1" aria-label="">
+          <span class="choice-label">B</span>
+          <span class="choice-text"></span>
+        </button>
+        <button class="choice-btn" id="choice-2" aria-label="">
+          <span class="choice-label">C</span>
+          <span class="choice-text"></span>
+        </button>
+        <button class="choice-btn" id="choice-3" aria-label="">
+          <span class="choice-label">D</span>
+          <span class="choice-text"></span>
+        </button>
+      </div>
+
+    </div>
+  </main>
+
+</div>
+
+<script src="../assets/js/hard-questions.js"></script>
+<script src="../assets/js/hard-quiz.js"></script>
+<script src="../assets/js/footer.js"></script>
+</body>
+</html>

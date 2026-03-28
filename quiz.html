@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>クイズ — 漢字検定ゲーム</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;600;800&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="quiz-page">
+
+  <!-- Sticky header with progress -->
+  <header class="quiz-header">
+    <div class="quiz-header__top">
+      <span class="quiz-header__title">漢字検定ゲーム</span>
+      <span class="progress-label" id="js-progress-label" aria-live="polite">Q1 / 15</span>
+    </div>
+    <div class="progress-wrap">
+      <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="15" aria-valuenow="0" id="js-progress-bar">
+        <div class="progress-fill" id="js-progress-fill" style="width:0%"></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Phase decorative image (switches every 5 questions) -->
+  <div class="phase-wrap" aria-hidden="true">
+    <div class="phase-img-box" id="js-phase-box">
+      <img src="assets/images/phase1.png" alt="" id="js-phase-img"
+           onerror="this.style.display='none'; document.getElementById('js-phase-fallback').style.display='flex';">
+      <div class="phase-img-box__fallback" id="js-phase-fallback"
+           style="display:none">炎</div>
+    </div>
+  </div>
+
+  <!-- Quiz question + choices -->
+  <main class="quiz-main">
+    <div class="quiz-card" id="js-quiz-card">
+
+      <!-- Type badge + Q number -->
+      <div class="quiz-type-row">
+        <span class="badge badge--yomi" id="js-type-badge">読み</span>
+        <span class="quiz-qnum" id="js-qnum">第1問</span>
+      </div>
+
+      <!-- Instruction -->
+      <p class="quiz-question" id="js-question-text"></p>
+
+      <!-- Target word (large display) -->
+      <div>
+        <span class="quiz-word" id="js-word"></span>
+      </div>
+
+      <!-- 4 choices -->
+      <div class="choices" role="group" aria-label="選択肢" id="js-choices">
+        <button class="choice-btn" id="choice-0" aria-label="">
+          <span class="choice-label">A</span>
+          <span class="choice-text"></span>
+        </button>
+        <button class="choice-btn" id="choice-1" aria-label="">
+          <span class="choice-label">B</span>
+          <span class="choice-text"></span>
+        </button>
+        <button class="choice-btn" id="choice-2" aria-label="">
+          <span class="choice-label">C</span>
+          <span class="choice-text"></span>
+        </button>
+        <button class="choice-btn" id="choice-3" aria-label="">
+          <span class="choice-label">D</span>
+          <span class="choice-text"></span>
+        </button>
+      </div>
+
+    </div><!-- /.quiz-card -->
+  </main>
+
+</div>
+
+<script src="assets/js/questions.js"></script>
+<script src="assets/js/quiz.js"></script>
+</body>
+</html>
