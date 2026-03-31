@@ -163,13 +163,13 @@ const LEVELS = [
     min: 8, max: 12,
     title: '白能面',
     caption: '超優秀なオペレーター！旅で見た知識を一度見たら忘れないのかも？',
-    image: 'assets/images/rank3.png'
+    image: 'assets/images/rank2.png'
   },
   {
     min: 0, max: 7,
     title: '大親分',
-    caption: '文字を勉強中の大親分！',
-    image: 'assets/images/rank3.png'
+    caption: '伸びしろは無限大！',
+    image: 'assets/images/rank1.png'
   }
 ];
 

@@ -28,9 +28,9 @@
 
   // ── Phase config (hard mode uses red-toned fallbacks) ──
   const PHASES = [
-    { src: '/assets/images/hard-phase1.png', fallbackChar: '◇', qRange: '1〜5問' },
-    { src: '/assets/images/hard-phase2.png', fallbackChar: '◇', qRange: '6〜10問' },
-    { src: '/assets/images/hard-phase3.png', fallbackChar: '◇', qRange: '11〜15問' },
+    { src: '/assets/images/hard-phase1.png', fallbackChar: '', qRange: '1〜5問' },
+    { src: '/assets/images/hard-phase2.png', fallbackChar: '', qRange: '6〜10問' },
+    { src: '/assets/images/hard-phase3.png', fallbackChar: '', qRange: '11〜15問' },
   ];
 
   function getPhase(index) { return Math.floor(index / 5); }
