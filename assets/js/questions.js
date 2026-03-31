@@ -155,19 +155,19 @@ const QUESTIONS = [
 const LEVELS = [
   {
     min: 13, max: 15,
-    title: '管理人',
+    title: '黒夜叉',
     caption: 'あらゆる知識を知り尽くしたあなたはタロⅡマスター！',
     image: 'assets/images/rank3.png'
   },
   {
     min: 8, max: 12,
-    title: 'ペリカ',
+    title: '白能面',
     caption: '超優秀なオペレーター！旅で見た知識を一度見たら忘れないのかも？',
     image: 'assets/images/rank3.png'
   },
   {
     min: 0, max: 7,
-    title: 'タンタン',
+    title: '大親分',
     caption: '文字を勉強中の大親分！',
     image: 'assets/images/rank3.png'
   }
