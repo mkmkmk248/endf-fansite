@@ -123,8 +123,8 @@ const HARD_LEVELS = [
   },
   {
     min: 0, max: 5,
-    title: '星門を超えて',
-    caption: 'テラからやって来た。',
+    title: '星門を超えた旅行者',
+    caption: 'タロⅡからやって来た。',
     image: '/assets/images/hard-rank1.png'
   }
 ];

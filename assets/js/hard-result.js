@@ -62,7 +62,7 @@
   rankImg.src = level.image;
   rankImg.alt = level.title;
 
-  const fallbackChars = ['📜', '⚔️', '👹'];
+  const fallbackChars = [' ', '🐰', ' '];
   const rankIndex = [
     { min: 0,  max: 5  },
     { min: 6,  max: 9 },
