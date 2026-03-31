@@ -60,8 +60,8 @@ const HARD_QUESTIONS = [
     type: 'yomi',
     question: '次の文字の意味は？',
     word: '通信途絶',
-    choices: ['通信途絶', '進化系図', '唄', '代償'],
-    answer: 0,
+    choices: ['唄', '進化系図', '通信途絶', '代償'],
+    answer: 2,
     dimText: true,
     wordImage: '/assets/images/signallost.svg', 
     explanation: ''
