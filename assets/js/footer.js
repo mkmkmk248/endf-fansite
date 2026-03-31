@@ -1,6 +1,5 @@
 /**
- * 漢字検定ゲーム — 共通フッター
- * 全ページの </body> 直前に <script src="/assets/js/footer.js"> として読み込む
+  全ページの </body> 直前に <script src="/assets/js/footer.js"> として読み込む
  */
 (function () {
   'use strict';

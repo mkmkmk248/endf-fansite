@@ -1,8 +1,4 @@
-/**
- * 漢字検定ゲーム ハードモード — Result Logic
- * hard/result.html で読み込まれます。
- * hard-questions.js が先に読み込まれている必要があります。
- */
+
 (function () {
   'use strict';
 

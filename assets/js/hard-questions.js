@@ -1,7 +1,4 @@
-/**
- * 漢字検定ゲーム ハードモード — 問題データ
- * 差し替え方法は questions.js と同じ形式です。
- */
+
 const HARD_QUESTIONS = [
   // ── 読み問題 (10問) ──────────────────────────────────
   {
@@ -111,8 +108,8 @@ const HARD_QUESTIONS = [
 const HARD_LEVELS = [
   {
     min: 10, max: 10,
-    title: '■■■■■■■■■',
-    caption: '■■■■■■■■■■■■■■.',
+    title: '侵入式コールコマンド',
+    caption: '■■■■ ■■■■■■■■■■.',
     image: '/assets/images/hard-rank3.png'
   },
   {
@@ -123,8 +120,8 @@ const HARD_LEVELS = [
   },
   {
     min: 0, max: 5,
-    title: '星門を超えた旅行者',
-    caption: 'タロⅡとテラを繋ぐ。',
+    title: '星門の向こう',
+    caption: 'タロⅡで生きる。',
     image: '/assets/images/hard-rank1.png'
   }
 ];

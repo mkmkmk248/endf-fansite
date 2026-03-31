@@ -1,7 +1,5 @@
 /**
- * 漢字検定ゲーム — Quiz Logic
- * quiz.html で読み込まれます。
- * questions.js が先に読み込まれている必要があります。
+ * questions.jsを先に読み込み。
  */
 (function () {
   'use strict';

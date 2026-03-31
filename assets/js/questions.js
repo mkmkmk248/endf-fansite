@@ -1,15 +1,4 @@
-/**
- * 漢字検定ゲーム - 問題データ
- *
- * 差し替え方法:
- *  - type: 'yomi'  → 読み問題 (読みを10問用意)
- *  - type: 'kanji' → 漢字問題 (漢字を5問用意)
- *  - question: 出題文 (instruction)
- *  - word: 問われる語 (大きく表示される)
- *  - choices: 4択の選択肢 (配列インデックス 0〜3)
- *  - answer: 正解のインデックス (0〜3)
- *  - explanation: 解説文
- */
+
 const QUESTIONS = [
   // ── 読み問題 (10問) ──────────────────────────────────
   {
@@ -107,7 +96,7 @@ const QUESTIONS = [
   {
     id: 11,
     type: 'kanji',
-    question: '次のひらがなを漢字に変換してください。',
+    question: '次の単語を漢字に変換してください。',
     word: 'タンタン',
     choices: ['湯湯', '単単', '丹丹', '淡淡'],
     answer: 0,
@@ -116,7 +105,7 @@ const QUESTIONS = [
   {
     id: 12,
     type: 'kanji',
-    question: '次のひらがなを漢字に変換してください。',
+    question: '次の単語を漢字に変換してください。',
     word: 'チェン・センユー',
     choices: ['陳戦友', '陳森友', '陳千語', '陳千尤'],
     answer: 2,
@@ -125,7 +114,7 @@ const QUESTIONS = [
   {
     id: 13,
     type: 'kanji',
-    question: '次のひらがなを漢字に変換してください。',
+    question: '次の単語を漢字に変換してください。',
     word: 'パン・ユェン',
     choices: ['潘遠', '潘源', '版遠', '版源'],
     answer: 0,
@@ -134,7 +123,7 @@ const QUESTIONS = [
   {
     id: 14,
     type: 'kanji',
-    question: '次のひらがなを漢字に変換してください。',
+    question: '次の単語を漢字に変換してください。',
     word: 'そうぞく',
     choices: ['滄族', '滄賊', '蒼族', '蒼賊'],
     answer: 1,
@@ -143,7 +132,7 @@ const QUESTIONS = [
   {
     id: 15,
     type: 'kanji',
-    question: '次のひらがなを漢字に変換してください。',
+    question: '次の単語を漢字に変換してください。',
     word: 'そくじょう',
     choices: ['息譲', '息穣', '息壌', '息醸'],
     answer: 2,
@@ -162,7 +151,7 @@ const LEVELS = [
   {
     min: 8, max: 12,
     title: '白能面',
-    caption: '超優秀なオペレーター！旅で見た知識を一度見たら忘れないのかも？',
+    caption: '超優秀なオペレーター！知識を一度見た知識を忘れないのかも？',
     image: 'assets/images/rank2.png'
   },
   {
