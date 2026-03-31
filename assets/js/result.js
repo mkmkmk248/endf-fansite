@@ -1,8 +1,4 @@
-/**
- * 漢字検定ゲーム — Result Logic
- * result.html で読み込まれます。
- * questions.js が先に読み込まれている必要があります。
- */
+
 (function () {
   'use strict';
 
@@ -151,7 +147,7 @@
       `称号：${level.title}`,
       `結果：${totalCorrect} / ${QUESTIONS.length}問正解`,
       ``,
-      `${siteUrl}`,
+      `https://talosii-toitsu-test.pages.dev`,
       `#タロii統一テスト`
     ].join('\n');
   }

@@ -130,7 +130,7 @@
       `称号：${level.title}`,
       `結果：${totalCorrect} / ${HARD_QUESTIONS.length}問正解`,
       ``,
-      `${siteUrl}`,
+      `https://talosii-toitsu-test.pages.dev`,
       `#タロii統一テスト`
     ].join('\n');
   }
