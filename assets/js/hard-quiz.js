@@ -28,9 +28,9 @@
 
   // ── Phase config (hard mode uses red-toned fallbacks) ──
   const PHASES = [
-    { src: '/assets/images/hard-phase1.png', fallbackChar: '炎', qRange: '1〜5問' },
-    { src: '/assets/images/hard-phase2.png', fallbackChar: '獄', qRange: '6〜10問' },
-    { src: '/assets/images/hard-phase3.png', fallbackChar: '覇', qRange: '11〜15問' },
+    { src: '/assets/images/hard-phase1.png', fallbackChar: '◇', qRange: '1〜5問' },
+    { src: '/assets/images/hard-phase2.png', fallbackChar: '◇', qRange: '6〜10問' },
+    { src: '/assets/images/hard-phase3.png', fallbackChar: '◇', qRange: '11〜15問' },
   ];
 
   function getPhase(index) { return Math.floor(index / 5); }
@@ -60,14 +60,35 @@
     questionText.textContent = q.question;
     wordEl.textContent = q.word;
 
+    if (q.wordImage) {
+  wordEl.classList.add('quiz-word--image');
+  wordEl.style.backgroundImage = `url(${q.wordImage})`;
+} else {
+  wordEl.classList.remove('quiz-word--image');
+  wordEl.style.backgroundImage = '';
+}
+choiceButtons.forEach((btn, i) => {
     choiceButtons.forEach((btn, i) => {
+
+  btn.style.backgroundImage = '';
+  btn.querySelector('.choice-label').style.visibility = '';
+  btn.querySelector('.choice-text').style.visibility = '';
+
       btn.className = 'choice-btn';
       btn.disabled = false;
       btn.querySelector('.choice-label').textContent = labels[i];
       btn.querySelector('.choice-text').textContent = q.choices[i];
       btn.setAttribute('aria-label', `${labels[i]}: ${q.choices[i]}`);
+      if (q.choiceImages) {
+    btn.classList.add('choice-btn--image');
+    btn.style.backgroundImage = `url(${q.choiceImages[i]})`;
+    btn.querySelector('.choice-label').style.visibility = 'hidden';
+    btn.querySelector('.choice-text').style.visibility = 'hidden';
+  }
       btn.onclick = () => selectAnswer(i);
     });
+
+});
   }
 
   function switchPhase(phase) {

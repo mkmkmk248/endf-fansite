@@ -10,15 +10,13 @@
   footer.innerHTML = `
     <div class="site-footer__inner">
       <a href="/index.html" class="site-footer__logo" aria-label="トップページへ">
-        <span class="site-footer__logo-kanji" aria-hidden="true">漢</span>
-        <span class="site-footer__logo-text">漢字検定ゲーム</span>
+        <span class="site-footer__logo-text">タロⅡ統一テスト</span>
       </a>
-      <nav class="site-footer__nav" aria-label="フッターナビゲーション">
-        <a href="/index.html" class="site-footer__link">通常モード</a>
-        <span class="site-footer__sep" aria-hidden="true">／</span>
-        <a href="/hard/index.html" class="site-footer__link site-footer__link--hard">ハードモード</a>
-      </nav>
-      <p class="site-footer__copy">© 漢字検定ゲーム</p>
+
+      <p class="site-footer__copy">
+      このサイトは二次創作です。<br>
+      ファンメイドであり公式とは関係ありません。<br>
+      <a href="https://x.com/Sussuandi">作った人：@Sussuandi</a></p>
     </div>
   `;
 

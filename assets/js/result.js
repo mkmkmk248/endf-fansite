@@ -105,7 +105,7 @@
     item.style.animation = `fadeUp .4s ${0.1 + i * 0.04}s ease forwards`;
 
     // Verdict mark
-    const verdict = isCorrect ? '○' : '✗';
+    const verdict = isCorrect ? '○' : '×';
 
     // Build answers rows
     let ansRows = '';
@@ -147,14 +147,12 @@
   function buildShareText() {
     const siteUrl = window.location.origin + '/';
     return [
-      `漢字検定ゲームに挑戦しました！`,
-      `結果：${totalCorrect} / ${QUESTIONS.length}問正解（正答率${pct}%）`,
+      `タロⅡ統一漢字テストに挑戦しました！`,
       `称号：${level.title}`,
-      `読み ${yomiCorrect}/${yomiTotal} ・ 漢字 ${kanjiCorrect}/${kanjiTotal}`,
+      `結果：${totalCorrect} / ${QUESTIONS.length}問正解`,
       ``,
-      `あなたも挑戦してみよう👇`,
       `${siteUrl}`,
-      `#漢字検定ゲーム`
+      `#タロii統一テスト`
     ].join('\n');
   }
 

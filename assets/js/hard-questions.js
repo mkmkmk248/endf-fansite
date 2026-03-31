@@ -7,160 +7,124 @@ const HARD_QUESTIONS = [
   {
     id: 1,
     type: 'yomi',
-    question: '次の漢字の読み方を選んでください。',
-    word: '海豚',
-    choices: ['うに', 'いるか', 'くじら', 'たこ'],
-    answer: 1,
-    explanation: '「海豚（いるか）」はイルカ目の哺乳類。「豚（ぶた）」に似た顔から「海の豚」と書きます。難読動物名の定番です。'
+    question: '次の文字の読み方を選んで。',
+    word: '源石',
+    choices: ['おりじにうむ', 'げんせき', 'おりぱしー', 'げんがん'],
+    answer: 0,
+    explanation: ''
   },
   {
     id: 2,
     type: 'yomi',
-    question: '次の漢字の読み方を選んでください。',
-    word: '土竜',
-    choices: ['みずち', 'もぐら', 'とかげ', 'やもり'],
+    question: '次の文字の読み方を選んで。',
+    word: '石棺',
+    choices: ['せきすう', 'せっかん', 'せきかん', 'いしひつぎ'],
     answer: 1,
-    explanation: '「土竜（もぐら）」は土中に潜るモグラのこと。土に潜る姿を龍に見立てた当て字です。'
+    explanation: ''
   },
   {
     id: 3,
     type: 'yomi',
-    question: '次の漢字の読み方を選んでください。',
-    word: '蝙蝠',
-    choices: ['とんぼ', 'かぶとむし', 'こうもり', 'かまきり'],
-    answer: 2,
-    explanation: '「蝙蝠（こうもり）」は夜間に飛ぶ哺乳類。中国では幸運の象徴とされ、「福」と「蝠」の音が近いことから縁起物にもなっています。'
+    question: '次の文字の読み方を選んで。',
+    word: '赤霄',
+    choices: ['あかぞら', 'せきしょう', 'せきうん', 'せきてい'],
+    answer: 1,
+    explanation: ''
   },
   {
     id: 4,
     type: 'yomi',
-    question: '次の漢字の読み方を選んでください。',
-    word: '躑躅',
-    choices: ['さくら', 'すみれ', 'つつじ', 'あじさい'],
+    question: '次の文字の読み方を選んで。',
+    word: '潮汐',
+    choices: ['しおさい', 'しおしお', 'ちょうせき', 'うしお'],
     answer: 2,
-    explanation: '「躑躅（つつじ）」はツツジ科の植物。「躑躅（てきちょく）」と読むと「ためらい歩む」の意味になります。難読植物名の最難関の一つ。'
+    explanation: ''
   },
   {
     id: 5,
     type: 'yomi',
-    question: '次の漢字の読み方を選んでください。',
-    word: '河豚',
-    choices: ['こいのぼり', 'かわうそ', 'なまず', 'ふぐ'],
-    answer: 3,
-    explanation: '「河豚（ふぐ）」はフグ目の魚。膨らんだ姿が豚に似ていることから「河の豚」と書きます。猛毒テトロドトキシンで知られる高級魚です。'
+    question: '次の文字の読み方を選んで。',
+    word: 'BABEL',
+    choices: ['ばべる', 'ろどす', 'あびす', 'ふりすとん'],
+    answer: 0,
+    explanation: ''
   },
   {
     id: 6,
     type: 'yomi',
-    question: '次の漢字の読み方を選んでください。',
-    word: '鸚鵡',
-    choices: ['はくちょう', 'おうむ', 'つばめ', 'ほととぎす'],
-    answer: 1,
-    explanation: '「鸚鵡（おうむ）」は人の言葉を真似るオウム目の鳥。「鸚鵡返し」という表現でも有名。画数の多い難読漢字の代表です。'
+    question: '次の文字の読み方を選んで。',
+    word: '慈悲光塔',
+    choices: ['あんこくじだい', 'どごうこうみょう', 'こうかんざんしょく', 'じひこうとう'],
+    answer: 3,
+    explanation: ''
   },
   {
     id: 7,
     type: 'yomi',
-    question: '次の漢字の読み方を選んでください。',
-    word: '翡翠',
-    choices: ['かわせみ', 'まなつる', 'おしどり', 'あおさぎ'],
+    question: '次の文字の意味は？',
+    word: '通信途絶',
+    choices: ['通信途絶', '進化系図', '唄', '代償'],
     answer: 0,
-    explanation: '「翡翠（かわせみ）」は水辺に棲む美しいカワセミ科の鳥。宝石の「翡翠（ひすい）」とも読み、その色からカワセミの別名にもなっています。'
+    dimText: true,
+    wordImage: '/assets/images/signallost.svg', 
+    explanation: ''
   },
   {
     id: 8,
     type: 'yomi',
-    question: '次の漢字の読み方を選んでください。',
-    word: '百足',
-    choices: ['むかで', 'ひとで', 'なめくじ', 'げじげじ'],
+    question: '次の文字の意味は？',
+    word: 'カズデル',
+    choices: ['カズデル', '巫術', 'ティカズ', '魔王'],
     answer: 0,
-    explanation: '「百足（むかで）」はムカデ綱の節足動物。100本の足（実際は30〜354本）を持つことからこの名がつきました。脱出不能の意「百足の草鞋」でも知られます。'
+    dimText: true,
+    wordImage: '/assets/images/kazdel.svg', 
+    explanation: ''
   },
   {
     id: 9,
     type: 'yomi',
-    question: '次の漢字の読み方を選んでください。',
-    word: '枇杷',
-    choices: ['あんず', 'もも', 'びわ', 'すもも'],
-    answer: 2,
-    explanation: '「枇杷（びわ）」はバラ科の果樹。楽器の「琵琶（びわ）」に葉や果実の形が似ていることからこの名がつきました。葉は漢方薬としても利用されます。'
+    question: '次の文字の意味は？',
+    word: '自然',
+    choices: ['部族', '自然', '霊魂', '視相'],
+    answer: 1,
+    dimText: true,
+    choiceImages: [                                  // 追加
+    '/assets/images/thjodar.svg',
+    '/assets/images/angar.svg',
+    '/assets/images/snjofna.svg',
+    '/assets/images/mikillear.svg',
+  ],
+    explanation: ''
   },
   {
     id: 10,
     type: 'yomi',
-    question: '次の漢字の読み方を選んでください。',
-    word: '海星',
-    choices: ['くらげ', 'うに', 'なまこ', 'ひとで'],
-    answer: 3,
-    explanation: '「海星（ひとで）」は棘皮動物門ヒトデ綱の総称。星型の体が海の星に見えることから「海星」とも書きます。腕を再生する能力を持ちます。'
-  },
-
-  // ── 漢字問題 (5問) ──────────────────────────────────
-  {
-    id: 11,
-    type: 'kanji',
-    question: '次のひらがなを漢字に変換してください。',
-    word: 'あいまい',
-    choices: ['愛昧', '曖昧', '愛眛', '哀昧'],
-    answer: 1,
-    explanation: '「曖昧（あいまい）」はぼんやりとして判然としないこと。「曖」は「日（ひへん）+愛」の構成で、「昧」は「日（ひへん）+未」の構成。両方とも日偏の難漢字です。'
-  },
-  {
-    id: 12,
-    type: 'kanji',
-    question: '次のひらがなを漢字に変換してください。',
-    word: 'うろたえる',
-    choices: ['動揺える', '狼狽える', '浮足える', '狼藉える'],
-    answer: 1,
-    explanation: '「狼狽える（うろたえる）」はあわてふためくこと。「狼狽（ろうばい）」は本来「狼（おおかみ）」と「狽（架空の獣）」が互いを必要とし離れると歩けないという故事から転じた言葉です。'
-  },
-  {
-    id: 13,
-    type: 'kanji',
-    question: '次のひらがなを漢字に変換してください。',
-    word: 'たたずむ',
-    choices: ['立佇む', '佇む', '只管む', '佇立む'],
-    answer: 1,
-    explanation: '「佇む（たたずむ）」はその場にじっと立ち止まること。「佇」は「人偏＋宁（ちょ）」の会意文字で、人が静かに立ち尽くす様子を表しています。'
-  },
-  {
-    id: 14,
-    type: 'kanji',
-    question: '次のひらがなを漢字に変換してください。',
-    word: 'さざなみ',
-    choices: ['細波', '漣', '細浪', '小波'],
-    answer: 1,
-    explanation: '「漣（さざなみ）」は水面に立つ細かい波のこと。「漣」一字でさざなみを意味する難漢字です。「漣々（れんれん）」と読むと「さざなみが続くさま」を表します。'
-  },
-  {
-    id: 15,
-    type: 'kanji',
-    question: '次のひらがなを漢字に変換してください。',
-    word: 'もてなす',
-    choices: ['以成す', '持て成す', '催す', '款待す'],
-    answer: 1,
-    explanation: '「持て成す（もてなす）」はお客を心を込めて扱うこと。「持て」は「もって」の転で「そのような状態にして」、「成す」は「〜にする」の意。日本のおもてなし文化の根幹です。'
+    question: '・ーー　・・・・　ーーー　　ー・・　ーーー　　ー・ーー　ーーー　・・ー　　ー　・・・・　・・　ー・　ー・ー　　・・　　・ー　ーー　・・ーー・・　',
+    word: '■■■■',
+    choices: ['■■■■■■■■■', '■■■■■■■■■', '■■■■■■■■■', '■■■■■■■■■'],
+    anyCorrect: true,
+    explanation: '■■■■■■■■■'
   }
 ];
 
 // ハードモード レベル定義（3段階）
 const HARD_LEVELS = [
   {
-    min: 13, max: 15,
-    title: '難読の神',
-    caption: '圧巻！難読漢字をも制した真の漢字マスターです。',
+    min: 10, max: 10,
+    title: '■■■■■■■■■',
+    caption: '■■■■■■■■■■■■■■.',
     image: '/assets/images/hard-rank3.png'
   },
   {
-    min: 7, max: 12,
-    title: '難読マスター',
-    caption: '素晴らしい！難問にも動じない漢字力の持ち主です。',
+    min: 6, max: 9,
+    title: 'テラマスター',
+    caption: 'すごい！テラにとっても詳しいんですね！',
     image: '/assets/images/hard-rank2.png'
   },
   {
-    min: 0, max: 6,
-    title: '難読入門',
-    caption: '難問揃いでしたね。基礎を固めて再挑戦しよう！',
+    min: 0, max: 5,
+    title: '星門を超えて',
+    caption: 'テラからやって来た。',
     image: '/assets/images/hard-rank1.png'
   }
 ];

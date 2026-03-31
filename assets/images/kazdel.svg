@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 238.72 63.83">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g>
+    <polygon class="cls-1" points="41.86 33.34 50.75 17.95 32.98 17.95 41.86 33.34"/>
+    <polygon class="cls-1" points="41.86 31.11 32.98 46.5 50.75 46.5 41.86 31.11"/>
+  </g>
+  <g>
+    <g>
+      <polygon class="cls-1" points="138.5 46.5 147.39 31.11 129.62 31.11 138.5 46.5"/>
+      <polygon class="cls-1" points="122.7 46.5 131.58 31.11 113.81 31.11 122.7 46.5"/>
+    </g>
+    <polygon class="cls-1" points="130.6 32.82 139.49 17.43 121.72 17.43 130.6 32.82"/>
+  </g>
+  <g>
+    <polygon class="cls-1" points="105.97 26.22 94.26 46.5 117.68 46.5 105.97 26.22"/>
+    <polygon class="cls-1" points="97.21 38.88 108.92 18.61 85.51 18.61 97.21 38.88"/>
+  </g>
+  <g>
+    <polygon class="cls-1" points="68.93 31.11 60.04 46.5 77.81 46.5 68.93 31.11"/>
+    <polygon class="cls-1" points="78.16 32.05 58.75 32.05 53.75 17.34 83.16 17.34 78.16 32.05"/>
+  </g>
+  <g>
+    <rect class="cls-1" x="151.63" y="18.25" width="24.9" height="18.58"/>
+    <rect class="cls-1" x="151.63" y="37.93" width="11.48" height="8.57"/>
+  </g>
+  <g>
+    <rect class="cls-1" x="180.84" y="18.51" width="24.9" height="19.84"/>
+    <rect class="cls-1" x="180.84" y="39.84" width="24.9" height="6.66"/>
+  </g>
+</svg>

@@ -29,9 +29,9 @@
 
   // ── Phase config ───────────────────────────────────────
   const PHASES = [
-    { src: '/assets/images/phase1.png', fallbackChar: '炎', qRange: '1〜5問' },
-    { src: '/assets/images/phase2.png', fallbackChar: '水', qRange: '6〜10問' },
-    { src: '/assets/images/phase3.png', fallbackChar: '金', qRange: '11〜15問' },
+    { src: 'assets/images/01.png', fallbackChar: '', qRange: '1〜5問' },
+    { src: 'assets/images/02.png', fallbackChar: '', qRange: '6〜10問' },
+    { src: 'assets/images/03.png', fallbackChar: '', qRange: '11〜15問' },
   ];
 
   function getPhase(index) {

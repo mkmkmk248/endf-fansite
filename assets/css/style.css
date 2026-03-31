@@ -764,13 +764,15 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   box-shadow: 0 6px 20px rgba(0,0,0,.4);
 }
 .share-btn--bsky {
-  background: #0085ff;
+  background: #1a1a1a;
   color: #fff;
+  border: 1px solid #333;
 }
 .share-btn--bsky:hover {
-  background: #0099ff;
+  background: #111;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0,133,255,.3);
+  box-shadow: 0 6px 20px rgba(0,0,0,.4);
+
 }
 
 .result-retry {
@@ -1024,4 +1026,70 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   border-color: rgba(232,112,112,.7);
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(232,112,112,.2);
+}
+
+:root #hard {
+  --bg-base:      #0c0e13;
+  --bg-surface:   #141620;
+  --bg-elevated:  #1c1f2a;
+  --bg-hover:     #252836;
+  --border:       #252838;
+  --border-light: #343750;
+
+  --accent:       #f23d30;
+  --accent-hover: #f7d458;
+  --accent-dim:   rgba(242, 194, 48, 0.10);
+  --accent-glow:  rgba(242, 194, 48, 0.18);
+
+  --text-hi:      #f2ede4;
+  --text-mid:     #9aa2b8;
+  --text-lo:      #555e74;
+
+  --ok:           #f23d30;
+  --ok-dim:       rgba(180, 180, 180, 0.12);
+  --ng:           #797979;
+  --ng-dim:       rgba(88, 88, 88, 0.12);
+
+  --radius:       12px;
+  --radius-sm:    8px;
+  --radius-lg:    20px;
+  --shadow:       0 8px 32px rgba(0,0,0,.5);
+  --shadow-sm:    0 2px 12px rgba(0,0,0,.3);
+
+  --transition:   0.2s ease;
+  --font-display: 'Shippori Mincho B1', serif;
+  --font-body:    'Noto Sans JP', sans-serif;
+}
+
+#hard {
+  .score-bar-fill--yomi  { background: linear-gradient(90deg, #c01d12, #f23d30); }
+  .badge--yomi  { background: rgba(211, 17, 17, 0.18); color: #f23d30; border: 1px solid rgba(240, 80, 80, 0.3); }
+}
+/* word を透明にして背景画像を表示 */
+.quiz-word--image {
+  color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-width: 200px;
+  min-height: 80px;
+  display: inline-block;
+}
+.quiz-word--image::after {
+  display: none; /* 黄色アンダーラインを非表示 */
+}
+
+/* choice を透明にして背景画像を表示 */
+.choice-btn--image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 80px;
+  border-color: var(--border-light);
+}
+.choice-btn--image:hover:not(:disabled) {
+  border-color: #e87070;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }

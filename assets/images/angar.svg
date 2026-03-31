@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 324.26 63.83">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g>
+    <rect class="cls-1" x="179.88" y="25.69" width="2.84" height="21.27"/>
+    <rect class="cls-1" x="184.32" y="27.27" width="2.84" height="12.31" transform="translate(30.76 141.13) rotate(-45)"/>
+    <rect class="cls-1" x="184.55" y="36.26" width="2.84" height="11.67" transform="translate(24.71 143.84) rotate(-45)"/>
+    <rect class="cls-1" x="178.97" y="18.04" width="4.67" height="4.67" transform="translate(67.51 -122.23) rotate(45)"/>
+  </g>
+  <g>
+    <rect class="cls-1" x="109.34" y="25.69" width="2.84" height="21.27"/>
+    <rect class="cls-1" x="113.79" y="27.27" width="2.84" height="12.31" transform="translate(10.1 91.26) rotate(-45)"/>
+    <rect class="cls-1" x="114.02" y="36.26" width="2.84" height="11.67" transform="translate(4.05 93.96) rotate(-45)"/>
+    <rect class="cls-1" x="108.43" y="18.04" width="4.67" height="4.67" transform="translate(46.85 -72.35) rotate(45)"/>
+  </g>
+  <g>
+    <rect class="cls-1" x="130.97" y="17.25" width="2.84" height="29.7"/>
+    <rect class="cls-1" x="131.52" y="19.63" width="2.84" height="23.33" transform="translate(16.8 103.17) rotate(-45)"/>
+  </g>
+  <g>
+    <g>
+      <rect class="cls-1" x="149.22" y="17.07" width="2.84" height="29.88"/>
+      <rect class="cls-1" x="165.08" y="17.07" width="2.84" height="29.88"/>
+      <rect class="cls-1" x="157.15" y="24.05" width="2.84" height="22.43" transform="translate(21.51 122.46) rotate(-45)"/>
+      <rect class="cls-1" x="147.27" y="33.84" width="22.43" height="2.84" transform="translate(21.48 122.39) rotate(-45)"/>
+    </g>
+    <rect class="cls-1" x="156.19" y="22.71" width="4.67" height="4.67" transform="translate(64.14 -104.76) rotate(45)"/>
+  </g>
+  <g>
+    <path class="cls-1" d="M205.37,46.95h-2.84v-29.33l2.43-1,11.85,11.85-1.01,2.43-10.42-.02v16.08ZM205.37,28.03h6.99s-6.99-6.98-6.99-6.98v6.98Z"/>
+    <polygon class="cls-1" points="206.18 19.77 202.52 19.77 202.52 16.61 204.94 16.61 206.18 19.77"/>
+    <rect class="cls-1" x="208.54" y="28.07" width="2.84" height="12.1" transform="translate(37.37 158.46) rotate(-45)"/>
+    <rect class="cls-1" x="210.92" y="41.32" width="4.67" height="4.67" transform="translate(93.33 -138.01) rotate(45)"/>
+  </g>
+</svg>

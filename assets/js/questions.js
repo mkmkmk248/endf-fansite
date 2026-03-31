@@ -15,43 +15,43 @@ const QUESTIONS = [
   {
     id: 1,
     type: 'yomi',
-    question: '次の漢字の読み方を選んでください。',
+    question: 'この漢字の読み方は？',
     word: '武陵',
     choices: ['ぶりょう', 'ごりょう', 'むりょう', 'ふりょう'],
-    answer: 1,
+    answer: 0,
     explanation: '中国の「武陵源」は岩の柱が3,000本以上林立する世界自然遺産。'
   },
   {
     id: 2,
     type: 'yomi',
-    question: '次の漢字の読み方を選んでください。',
+    question: 'この漢字の読み方は？',
     word: '黒夜叉',
     choices: ['くろやしゃ', 'こくやしゃ', 'へいえしゃ', 'くろよしゃ'],
-    answer: 2,
+    answer: 0,
     explanation: '黒夜叉は管理人のかっこいい別名。'
   },
   {
     id: 3,
     type: 'yomi',
-    question: '次の漢字の読み方を選んでください。',
+    question: 'この漢字の読み方は？',
     word: '帝江号',
     choices: ['ていこうごう', 'でぃーしゃんごう', 'だーじゃんごう', 'でぃーじゃんごう'],
-    answer: 1,
+    answer: 3,
     explanation: '帝江は中国の『山海経』に登場する怪獣の名前。顔もないし頭もない。'
   },
   {
     id: 4,
     type: 'yomi',
-    question: '次の漢字の読み方を選んでください。',
+    question: 'この漢字の読み方は？',
     word: '錦草',
     choices: ['にしきそう', 'めんそう', 'きんそう', 'にしきぐさ'],
-    answer: 3,
+    answer: 2,
     explanation: '現実のニシキソウと錦草(きんそう)は別物。模擬空間でふりがなを確認できる。'
   },
   {
     id: 5,
     type: 'yomi',
-    question: '次の漢字の読み方を選んでください。',
+    question: 'この漢字の読み方は？',
     word: '水竹鈴',
     choices: ['すいちくりん', 'みずちくりん', 'しゅいじゅうりん', 'みずたけすず'],
     answer: 0,
@@ -60,46 +60,46 @@ const QUESTIONS = [
   {
     id: 6,
     type: 'yomi',
-    question: '次の漢字の読み方を選んでください。',
+    question: 'この漢字の読み方は？',
     word: '芽針',
     choices: ['めしん', 'めばり', 'がしん', 'やーじぇん'],
-    answer: 1,
+    answer: 0,
     explanation: '「訓読み＋音読み」の湯桶読みに注意。'
   },
   {
     id: 7,
     type: 'yomi',
-    question: '次の漢字の読み方を選んでください。',
+    question: 'この漢字の読み方は？',
     word: '炎国',
     choices: ['えんこく', 'いぇんぐお', 'えんごく', 'ほむらこく'],
-    answer: 3,
-    explanation: '炎国はテラ(アークナイツ)にある大国。チェン・センユーのプロファイル等に登場する。'
+    answer: 2,
+    explanation: '炎国はテラにある大国で、武陵のルーツとなっている。チェン・センユーのプロファイル等に登場する。'
   },
   {
     id: 8,
     type: 'yomi',
-    question: '次の漢字の読み方を選んでください。',
+    question: 'この漢字の読み方は？',
     word: '折金券',
     choices: ['じぇーじんけん', 'おりきんけん', 'ろんめんへい', 'せっきんけん'],
-    answer: 2,
+    answer: 3,
     explanation: 'アイビーエナのプロファイルでふりがなが確認できる。'
   },
   {
     id: 9,
     type: 'yomi',
-    question: '次の漢字の読み方を選んでください。',
+    question: 'この漢字の読み方は？',
     word: '辣么大',
     choices: ['らーまーだ', 'らーやおだー', 'なーむあだー', 'らーまーたん'],
-    answer: 1,
+    answer: 0,
     explanation: '辣么大は方興街にあるダパンの火鍋店。ダパンのプロファイルでふりがなを確認できる。'
   },
   {
     id: 10,
     type: 'yomi',
-    question: '次の漢字の読み方を選んでください。',
+    question: 'この漢字の読み方は？',
     word: '展延源石',
     choices: ['おりじおめっと', 'おりじおあろい', 'おりじおしんせ', 'おりじおめとりー'],
-    answer: 0,
+    answer: 3,
     explanation: 'リリース予告特別番組内で読み上げられた。ゲーム内ではふりがなが振られていない。'
   },
 
@@ -110,7 +110,7 @@ const QUESTIONS = [
     question: '次のひらがなを漢字に変換してください。',
     word: 'タンタン',
     choices: ['湯湯', '単単', '丹丹', '淡淡'],
-    answer: 2,
+    answer: 0,
     explanation: 'タンタン券はよく見ると「湯」の文字が書かれている。'
   },
   {
@@ -119,7 +119,7 @@ const QUESTIONS = [
     question: '次のひらがなを漢字に変換してください。',
     word: 'チェン・センユー',
     choices: ['陳戦友', '陳森友', '陳千語', '陳千尤'],
-    answer: 1,
+    answer: 2,
     explanation: '武陵のオペレーターはプロファイルで漢字名が確認できる。'
   },
   {
@@ -128,7 +128,7 @@ const QUESTIONS = [
     question: '次のひらがなを漢字に変換してください。',
     word: 'パン・ユェン',
     choices: ['潘遠', '潘源', '版遠', '版源'],
-    answer: 3,
+    answer: 0,
     explanation: 'ダパンの本名。'
   },
   {
@@ -137,7 +137,7 @@ const QUESTIONS = [
     question: '次のひらがなを漢字に変換してください。',
     word: 'そうぞく',
     choices: ['滄族', '滄賊', '蒼族', '蒼賊'],
-    answer: 2,
+    answer: 1,
     explanation: '清波砦の人々は一部で滄賊と呼ばれている。'
   },
   {
@@ -145,8 +145,8 @@ const QUESTIONS = [
     type: 'kanji',
     question: '次のひらがなを漢字に変換してください。',
     word: 'そくじょう',
-    choices: ['息浄', '息穣', '息壌', '息醸'],
-    answer: 0,
+    choices: ['息譲', '息穣', '息壌', '息醸'],
+    answer: 2,
     explanation: '中国古代の伝説に登場する土壌と同じ名前。'
   }
 ];
@@ -154,40 +154,22 @@ const QUESTIONS = [
 // レベル定義
 const LEVELS = [
   {
-    min: 15, max: 15,
-    title: '漢字の神',
-    caption: '完璧！あなたは漢字の頂点に立つ神様です。',
-    image: '/assets/images/rank6.png'
+    min: 13, max: 15,
+    title: '管理人',
+    caption: 'あらゆる知識を知り尽くしたあなたはタロⅡマスター！',
+    image: 'assets/images/rank3.png'
   },
   {
-    min: 13, max: 14,
-    title: '漢字博士',
-    caption: '素晴らしい！漢字の達人に迫る圧倒的な実力です。',
-    image: '/assets/images/rank5.png'
+    min: 8, max: 12,
+    title: 'ペリカ',
+    caption: '超優秀なオペレーター！旅で見た知識を一度見たら忘れないのかも？',
+    image: 'assets/images/rank3.png'
   },
   {
-    min: 10, max: 12,
-    title: '漢字マスター',
-    caption: '優秀！漢字の知識は本物。あと一歩で頂点です。',
-    image: '/assets/images/rank4.png'
-  },
-  {
-    min: 7, max: 9,
-    title: '漢字見習い',
-    caption: 'まずまず！コツコツ練習を続けてさらに上を目指そう。',
-    image: '/assets/images/rank3.png'
-  },
-  {
-    min: 4, max: 6,
-    title: '漢字入門',
-    caption: 'これからが楽しみ！基礎を固めて再チャレンジしよう。',
-    image: '/assets/images/rank2.png'
-  },
-  {
-    min: 0, max: 3,
-    title: '漢字の卵',
-    caption: '旅は始まったばかり！まず基礎から学び直してみよう。',
-    image: '/assets/images/rank1.png'
+    min: 0, max: 7,
+    title: 'タンタン',
+    caption: '文字を勉強中の大親分！',
+    image: 'assets/images/rank3.png'
   }
 ];
 

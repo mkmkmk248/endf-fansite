@@ -22,7 +22,8 @@
   let yomiTotal = 0,   kanjiTotal   = 0;
 
   HARD_QUESTIONS.forEach((q, i) => {
-    const isCorrect = answers[i] === q.answer;
+    // const isCorrect = answers[i] === q.answer;
+    const isCorrect = q.anyCorrect ? true : answers[i] === q.answer;
     if (q.type === 'yomi') {
       yomiTotal++;
       if (isCorrect) { yomiCorrect++; totalCorrect++; }
@@ -63,20 +64,18 @@
 
   const fallbackChars = ['📜', '⚔️', '👹'];
   const rankIndex = [
-    { min: 0,  max: 6  },
-    { min: 7,  max: 12 },
-    { min: 13, max: 15 },
+    { min: 0,  max: 5  },
+    { min: 6,  max: 9 },
+    { min: 10, max: 10 },
   ].findIndex(r => totalCorrect >= r.min && totalCorrect <= r.max);
   rankFallback.textContent = fallbackChars[rankIndex] || '★';
 
   // ── Bar charts ─────────────────────────────────────────
   yomiVal.textContent  = `${yomiCorrect} / ${yomiTotal}`;
-  kanjiVal.textContent = `${kanjiCorrect} / ${kanjiTotal}`;
 
   requestAnimationFrame(() => {
     setTimeout(() => {
       yomiBar.style.width  = `${(yomiCorrect  / yomiTotal)  * 100}%`;
-      kanjiBar.style.width = `${(kanjiCorrect / kanjiTotal) * 100}%`;
     }, 300);
   });
 
@@ -86,14 +85,15 @@
 
   HARD_QUESTIONS.forEach((q, i) => {
     const userAns   = answers[i];
-    const isCorrect = userAns === q.answer;
+    // const isCorrect = userAns === q.answer;
+    const isCorrect = q.anyCorrect ? true : userAns === q.answer;
 
     const item = document.createElement('div');
     item.className = `review-item ${isCorrect ? 'is-correct' : 'is-wrong'}`;
     item.style.opacity = '0';
     item.style.animation = `fadeUp .4s ${0.1 + i * 0.04}s ease forwards`;
 
-    const verdict = isCorrect ? '○' : '✗';
+    const verdict = isCorrect ? '○' : '×';
     let ansRows = '';
     if (!isCorrect) {
       const userLabel  = userAns >= 0 ? choiceLabels[userAns] : '―';
@@ -130,14 +130,12 @@
   function buildShareText() {
     const siteUrl = window.location.origin + '/hard/';
     return [
-      `【ハードモード】漢字検定ゲームに挑戦しました！`,
-      `結果：${totalCorrect} / ${HARD_QUESTIONS.length}問正解（正答率${pct}%）`,
+      `タロⅡ統一■■テストに挑戦しました！`,
       `称号：${level.title}`,
-      `読み ${yomiCorrect}/${yomiTotal} ・ 漢字 ${kanjiCorrect}/${kanjiTotal}`,
+      `結果：${totalCorrect} / ${HARD_QUESTIONS.length}問正解`,
       ``,
-      `難読漢字に挑戦してみよう👇`,
       `${siteUrl}`,
-      `#漢字検定ゲーム #ハードモード`
+      `#タロii統一テスト`
     ].join('\n');
   }
 
