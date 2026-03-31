@@ -118,13 +118,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .progress-fill {
   height: 100%;
-  background: var(--text-mid);
-
-  transition: width .5s cubic-bezier(.4,0,.2,1);
-  box-shadow: 0 0 8px var(--accent-glow);
-}
-#hard .progress-fill {
-  height: 100%;
   background: var(--accent);
 
   transition: width .5s cubic-bezier(.4,0,.2,1);
@@ -331,16 +324,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 /* Header */
 .quiz-header {
-  padding: 16px 20px 12px;
-  background: var(--accent);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--border);
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-
-#hard .quiz-header {
   padding: 16px 20px 12px;
   background: rgba(12,14,19,.85);
   backdrop-filter: blur(8px);
