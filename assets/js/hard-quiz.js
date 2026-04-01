@@ -67,8 +67,8 @@ choiceButtons.forEach((btn, i) => {
     choiceButtons.forEach((btn, i) => {
 
   btn.style.backgroundImage = '';
-  btn.querySelector('.choice-label').style.visibility = '';
-  btn.querySelector('.choice-text').style.visibility = '';
+  btn.querySelector('.choice-label').style.opacity = '1';
+  btn.querySelector('.choice-text').style.opacity = '1';
 
       btn.className = 'choice-btn';
       btn.disabled = false;
@@ -78,8 +78,8 @@ choiceButtons.forEach((btn, i) => {
       if (q.choiceImages) {
     btn.classList.add('choice-btn--image');
     btn.style.backgroundImage = `url(${q.choiceImages[i]})`;
-    btn.querySelector('.choice-label').style.visibility = 'hidden';
-    btn.querySelector('.choice-text').style.visibility = 'hidden';
+    btn.querySelector('.choice-label').style.opacity = '0';
+    btn.querySelector('.choice-text').style.opacity = '0';
   }
       btn.onclick = () => selectAnswer(i);
     });
